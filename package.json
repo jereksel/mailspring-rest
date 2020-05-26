@@ -1,6 +1,6 @@
 {
-  "name": "sample",
-  "main": "./lib/main",
+  "name": "rest-api-plugin",
+  "main": "./lib/main-bridge",
   "version": "0.1.0",
   "repository": {
     "type": "git",
@@ -17,9 +17,17 @@
     "composer": true
   },
   "description": "Enter a description of your package!",
+  "dependencies": {
+    "koa-bodyparser": "4.3.0",
+    "koa": "^2.12.0",
+    "koa-route": "^3.2.0"
+  },
   "devDependencies": {
-    "@types/react": "^16.7.22",
-    "typescript": "^3.6.3"
+    "@types/koa-bodyparser": "4.2.0",
+    "@types/koa": "^2.11.3",
+    "@types/react": "^16.9.35",
+    "electron": "4.2.2",
+    "typescript": "^3.8.3"
   },
   "license": "MIT"
 }

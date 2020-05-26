@@ -1,18 +1,10 @@
-import { ComponentRegistry } from 'mailspring-exports';
-
-import MyComposerButton from './my-composer-button';
-import MyMessageSidebar from './my-message-sidebar';
+import { Main } from './main';
 
 // Activate is called when the package is loaded. If your package previously
 // saved state using `serialize` it is provided.
 //
 export function activate() {
-  ComponentRegistry.register(MyComposerButton, {
-    role: 'Composer:ActionButton',
-  });
-  ComponentRegistry.register(MyMessageSidebar, {
-    role: 'MessageListSidebar:ContactCard',
-  });
+  Main.activate()
 }
 
 // Serialize is called when your package is about to be unmounted.
@@ -27,6 +19,5 @@ export function serialize() {}
 // subscribing to events, release them here.
 //
 export function deactivate() {
-  ComponentRegistry.unregister(MyComposerButton);
-  ComponentRegistry.unregister(MyMessageSidebar);
+  Main.deactive()
 }
